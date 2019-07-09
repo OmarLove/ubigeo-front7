@@ -1,0 +1,54 @@
+<h3>Listado de Ubigeos</h3>
+
+ <div class="listado">
+
+    <h4>Departamento</h4>
+    <table>
+        <thead>
+            <th>Código</th>
+            <th>Nombre</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ubigeo of ubigeosDepartamento">
+                <td>{{ubigeo.codigoDepartamento}}</td>
+                <td>{{ubigeo.nombreDepartamento}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h4>Provincia</h4>
+    <table>
+        <thead>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Código Padre</th>
+            <th>Nombre Padre</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ubigeo of ubigeosProvincia">
+                <td>{{ubigeo.codigoProvincia}}</td>
+                <td>{{ubigeo.nombreProvincia}}</td>
+                <td>{{ubigeo.codigoDepartamento}}</td>
+                <td>{{ubigeo.nombreDepartamento}}</td>
+            </tr>
+        </tbody>
+    </table>    
+
+    <h4>Distrito</h4>
+    <table>
+        <thead>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Código Padre</th>
+            <th>Nombre Padre</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ubigeo of ubigeosDistrito">
+                <td>{{ubigeo.codigoDistrito}}</td>
+                <td>{{ubigeo.nombreDistrito}}</td>
+                <td>{{ubigeo.codigoProvincia}}</td>
+                <td>{{ubigeo.nombreProvincia}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
